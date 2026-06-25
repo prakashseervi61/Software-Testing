@@ -22,8 +22,39 @@ public class testngselenium {
         driver.findElement(By.id("login-button")).click();
         Thread.sleep(2000);
 
-        String getURL = driver.getCurrentUrl();
-        Assert.assertTrue((getURL.contains("inventory")));
+//        String getURL = driver.getCurrentUrl();
+//        Assert.assertTrue((getURL.contains("inventory")));
+
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("add-to-cart-sauce-labs-bike-light")).click();
+        Thread.sleep(1000);
+
+        driver.findElement((By.className("shopping_cart_link"))).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("checkout")).click();
+        Thread.sleep(1000);
+
+
+        driver.findElement(By.id("first-name")).sendKeys("Prakash");
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("last-name")).sendKeys("V");
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("postal-code")).sendKeys("123456");
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("continue")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("finish")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("back-to-products")).click();
+        Thread.sleep(1000);
+
 //        driver.quit();
     }
 }

@@ -22,8 +22,9 @@ public class testngselenium {
         driver.findElement(By.id("login-button")).click();
         Thread.sleep(2000);
 
-//        String getURL = driver.getCurrentUrl();
-//        Assert.assertTrue((getURL.contains("inventory")));
+        String getURL = driver.getCurrentUrl();
+        Assert.assertTrue((getURL.contains("inventory")));
+        Thread.sleep(2000);
 
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
         Thread.sleep(1000);
@@ -35,7 +36,6 @@ public class testngselenium {
 
         driver.findElement(By.id("checkout")).click();
         Thread.sleep(1000);
-
 
         driver.findElement(By.id("first-name")).sendKeys("Prakash");
         Thread.sleep(1000);
@@ -52,7 +52,12 @@ public class testngselenium {
         driver.findElement(By.id("finish")).click();
         Thread.sleep(1000);
 
-        driver.findElement(By.id("back-to-products")).click();
+        Assert.assertTrue(driver.getPageSource().contains("Thank you for your order!"));
+
+        driver.findElement(By.id("react-burger-menu-btn")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.id("logout_sidebar_link")).click();
         Thread.sleep(1000);
 
 //        driver.quit();

@@ -17,7 +17,7 @@ public class Logging {
         driver.get("https://www.selenium.dev/");
 
         logging.info("Clicking Download");
-        driver.findElement(By.linkText("Downnloads")).click();
+        driver.findElement(By.linkText("Downloads")).click();
         logging.info("URL:- "+ driver.getCurrentUrl());
 
         logging.warn("Warning");

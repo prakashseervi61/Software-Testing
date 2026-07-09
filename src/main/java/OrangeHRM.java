@@ -12,9 +12,6 @@ public class OrangeHRM {
 
     public static void main(String[] args) throws Exception {
 
-        // Create reports directory if it doesn't exist
-        new File("reports").mkdirs();
-
         ExtentReports extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter("reports/a.html");
 
